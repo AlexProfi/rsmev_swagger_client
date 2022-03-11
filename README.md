@@ -23,7 +23,7 @@ pip install git+https://github.com/AlexProfi/rsmev_swagger_client.git
 
 Then import the package:
 ```python
-import swagger-client 
+import swagger_client 
 ```
 
 ### Setuptools
@@ -37,7 +37,7 @@ python setup.py install --user
 
 Then import the package:
 ```python
-import swagger-client
+import swagger_client
 ```
 
 ## Getting Started
@@ -47,18 +47,18 @@ Please follow the [installation procedure](#installation--usage) and then run th
 ```python
 from __future__ import print_function
 import time
-import swagger-client
-from swagger-client.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
-body = swagger-client.CountQuery() # CountQuery | Параметры фильтрации (optional)
+body = swagger_client.CountQuery() # CountQuery | Параметры фильтрации (optional)
 
 try:
     # Возвращает кол-во заявлений указанного типа в разных статусах
@@ -67,12 +67,12 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_count: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
 file_name = 'file_name_example' # str | Имя запрашиваемого файла
@@ -84,12 +84,12 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_file: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
 filter_state = 56 # int | Фильтр по состоянию статуса (optional)
@@ -101,14 +101,14 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_history_status: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
-body = swagger-client.SearchQuery() # SearchQuery | Параметры фильтрации (optional)
+body = swagger_client.SearchQuery() # SearchQuery | Параметры фильтрации (optional)
 
 try:
     # Получает список заявлений указанного типа
@@ -117,12 +117,12 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_list: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
 
@@ -133,12 +133,12 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_retrieve: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 
 try:
@@ -148,13 +148,13 @@ try:
 except ApiException as e:
     print("Exception when calling ApplApi->appl_search_form: %s\n" % e)
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.ApplApi(swagger-client.ApiClient(configuration))
-body = swagger-client.UpdateStatus() # UpdateStatus | Статус для обновления
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
+body = swagger_client.UpdateStatus() # UpdateStatus | Статус для обновления
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
 

@@ -1,4 +1,4 @@
-# swagger-client.TypeinfoApi
+# swagger_client.TypeinfoApi
 
 All URIs are relative to *http://rsmev.yarcloud.ru/api*
 
@@ -19,16 +19,16 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger-client
-from swagger-client.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.TypeinfoApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.TypeinfoApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип ВС (например: initiativedistribution)
 
 try:
@@ -71,18 +71,18 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger-client
-from swagger-client.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.TypeinfoApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.TypeinfoApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Идентификатор ВС (например: initiativedistribution)
-body = swagger-client.SearchQuery() # SearchQuery | Параметры фильтрации (optional)
+body = swagger_client.SearchQuery() # SearchQuery | Параметры фильтрации (optional)
 search = 'search_example' # str | поисковая строка для фильтрации вывода (optional)
 
 try:
@@ -125,16 +125,16 @@ Name | Type | Description  | Notes
 ```python
 from __future__ import print_function
 import time
-import swagger-client
-from swagger-client.rest import ApiException
+import swagger_client
+from swagger_client.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: basic
-configuration = swagger-client.Configuration()
+configuration = swagger_client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger-client.TypeinfoApi(swagger-client.ApiClient(configuration))
+api_instance = swagger_client.TypeinfoApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Идентификатор ВС (например: initiativedistribution)
 id = 'id_example' # str | guid записи
 
