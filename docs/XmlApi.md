@@ -1,4 +1,4 @@
-# swagger client.XmlApi
+# swagger-client.XmlApi
 
 All URIs are relative to *http://rsmev.yarcloud.ru/api*
 
@@ -17,16 +17,16 @@ Method | HTTP request | Description
 ```python
 from __future__ import print_function
 import time
-import swagger client
-from swagger client.rest import ApiException
+import swagger-client
+from swagger-client.rest import ApiException
 from pprint import pprint
 # Configure HTTP basic authorization: basic
-configuration = swagger client.Configuration()
+configuration = swagger-client.Configuration()
 configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger client.XmlApi(swagger client.ApiClient(configuration))
+api_instance = swagger-client.XmlApi(swagger-client.ApiClient(configuration))
 xml = 'xml_example' # str | 
 message_id = 'message_id_example' # str | 
 reply_to = 'reply_to_example' # str | 
