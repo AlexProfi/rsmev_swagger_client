@@ -32,7 +32,8 @@ class XmlSendBody(object):
         'message_id': 'str',
         'reply_to': 'str',
         'zip': 'str',
-        'by_ftp': 'bool'
+        'by_ftp': 'bool',
+        'ver': 'str'
     }
 
     attribute_map = {
@@ -40,16 +41,18 @@ class XmlSendBody(object):
         'message_id': 'message_id',
         'reply_to': 'reply_to',
         'zip': 'zip',
-        'by_ftp': 'by_ftp'
+        'by_ftp': 'by_ftp',
+        'ver': 'ver'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
         self._reply_to = None
         self._zip = None
         self._by_ftp = None
+        self._ver = None
         self.discriminator = None
         self.xml = xml
         if message_id is not None:
@@ -60,6 +63,8 @@ class XmlSendBody(object):
             self.zip = zip
         if by_ftp is not None:
             self.by_ftp = by_ftp
+        if ver is not None:
+            self.ver = ver
 
     @property
     def xml(self):
@@ -177,6 +182,29 @@ class XmlSendBody(object):
         """
 
         self._by_ftp = by_ftp
+
+    @property
+    def ver(self):
+        """Gets the ver of this XmlSendBody.  # noqa: E501
+
+        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
+
+        :return: The ver of this XmlSendBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._ver
+
+    @ver.setter
+    def ver(self, ver):
+        """Sets the ver of this XmlSendBody.
+
+        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
+
+        :param ver: The ver of this XmlSendBody.  # noqa: E501
+        :type: str
+        """
+
+        self._ver = ver
 
     def to_dict(self):
         """Returns the model properties as a dict"""
