@@ -45,7 +45,7 @@ class XmlSendBody(object):
         'ver': 'ver'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=''):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
