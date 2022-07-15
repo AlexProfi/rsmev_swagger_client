@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**xml_send**](XmlApi.md#xml_send) | **POST** /xml/send/ | Ставит XML в очередь для последующей отправки в СМЭВ3
 
 # **xml_send**
-> OperationResult xml_send(xml, message_id, reply_to, zip, by_ftp)
+> OperationResult xml_send(xml, message_id, reply_to, zip, by_ftp, ver)
 
 Ставит XML в очередь для последующей отправки в СМЭВ3
 
@@ -32,10 +32,11 @@ message_id = 'message_id_example' # str |
 reply_to = 'reply_to_example' # str | 
 zip = 'zip_example' # str | 
 by_ftp = true # bool | 
+ver = 'ver_example' # str | 
 
 try:
     # Ставит XML в очередь для последующей отправки в СМЭВ3
-    api_response = api_instance.xml_send(xml, message_id, reply_to, zip, by_ftp)
+    api_response = api_instance.xml_send(xml, message_id, reply_to, zip, by_ftp, ver)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling XmlApi->xml_send: %s\n" % e)
@@ -50,6 +51,7 @@ Name | Type | Description  | Notes
  **reply_to** | **str**|  | 
  **zip** | **str**|  | 
  **by_ftp** | **bool**|  | 
+ **ver** | **str**|  | 
 
 ### Return type
 
