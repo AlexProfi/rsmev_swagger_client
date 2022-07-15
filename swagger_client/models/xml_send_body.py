@@ -45,7 +45,7 @@ class XmlSendBody(object):
         'ver': 'ver'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver='1'):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -203,7 +203,7 @@ class XmlSendBody(object):
         :param ver: The ver of this XmlSendBody.  # noqa: E501
         :type: str
         """
-        allowed_values = ["", "1", "2"]  # noqa: E501
+        allowed_values = ["1", "2"]  # noqa: E501
         if ver not in allowed_values:
             raise ValueError(
                 "Invalid value for `ver` ({0}), must be one of {1}"  # noqa: E501
