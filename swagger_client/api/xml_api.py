@@ -32,13 +32,13 @@ class XmlApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def xml_send(self, xml, message_id, reply_to, zip, by_ftp, ver, **kwargs):  # noqa: E501
+    def xml_send(self, xml, message_id, reply_to, zip, by_ftp, **kwargs):  # noqa: E501
         """Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
 
         Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.xml_send(xml, message_id, reply_to, zip, by_ftp, ver, async_req=True)
+        >>> thread = api.xml_send(xml, message_id, reply_to, zip, by_ftp, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -47,25 +47,24 @@ class XmlApi(object):
         :param str reply_to: (required)
         :param str zip: (required)
         :param bool by_ftp: (required)
-        :param str ver: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, ver, **kwargs)  # noqa: E501
+            return self.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, **kwargs)  # noqa: E501
         else:
-            (data) = self.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, ver, **kwargs)  # noqa: E501
+            (data) = self.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, **kwargs)  # noqa: E501
             return data
 
-    def xml_send_with_http_info(self, xml, message_id, reply_to, zip, by_ftp, ver, **kwargs):  # noqa: E501
+    def xml_send_with_http_info(self, xml, message_id, reply_to, zip, by_ftp, **kwargs):  # noqa: E501
         """Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
 
         Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, ver, async_req=True)
+        >>> thread = api.xml_send_with_http_info(xml, message_id, reply_to, zip, by_ftp, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -74,13 +73,12 @@ class XmlApi(object):
         :param str reply_to: (required)
         :param str zip: (required)
         :param bool by_ftp: (required)
-        :param str ver: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'by_ftp', 'ver']  # noqa: E501
+        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'by_ftp']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -115,10 +113,6 @@ class XmlApi(object):
         if ('by_ftp' not in params or
                 params['by_ftp'] is None):
             raise ValueError("Missing the required parameter `by_ftp` when calling `xml_send`")  # noqa: E501
-        # verify the required parameter 'ver' is set
-        if ('ver' not in params or
-                params['ver'] is None):
-            raise ValueError("Missing the required parameter `ver` when calling `xml_send`")  # noqa: E501
 
         collection_formats = {}
 
@@ -140,8 +134,6 @@ class XmlApi(object):
             local_var_files['zip'] = params['zip']  # noqa: E501
         if 'by_ftp' in params:
             form_params.append(('by_ftp', params['by_ftp']))  # noqa: E501
-        if 'ver' in params:
-            form_params.append(('ver', params['ver']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`
