@@ -47,7 +47,7 @@ class XmlApi(object):
         :param str reply_to: (required)
         :param str zip: (required)
         :param bool by_ftp: (required)
-        :param str ver: (required)
+        :param ModelInt ver: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -74,7 +74,7 @@ class XmlApi(object):
         :param str reply_to: (required)
         :param str zip: (required)
         :param bool by_ftp: (required)
-        :param str ver: (required)
+        :param ModelInt ver: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.

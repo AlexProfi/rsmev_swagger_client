@@ -33,7 +33,7 @@ class XmlSendBody(object):
         'reply_to': 'str',
         'zip': 'str',
         'by_ftp': 'bool',
-        'ver': 'str'
+        'ver': 'ModelInt'
     }
 
     attribute_map = {
@@ -45,7 +45,7 @@ class XmlSendBody(object):
         'ver': 'ver'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver='v1'):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -190,7 +190,7 @@ class XmlSendBody(object):
         Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
 
         :return: The ver of this XmlSendBody.  # noqa: E501
-        :rtype: str
+        :rtype: ModelInt
         """
         return self._ver
 
@@ -201,14 +201,8 @@ class XmlSendBody(object):
         Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
 
         :param ver: The ver of this XmlSendBody.  # noqa: E501
-        :type: str
+        :type: ModelInt
         """
-        allowed_values = ["v1", "v2"]  # noqa: E501
-        if ver not in allowed_values:
-            raise ValueError(
-                "Invalid value for `ver` ({0}), must be one of {1}"  # noqa: E501
-                .format(ver, allowed_values)
-            )
 
         self._ver = ver
 

@@ -32,7 +32,7 @@ message_id = 'message_id_example' # str |
 reply_to = 'reply_to_example' # str | 
 zip = 'zip_example' # str | 
 by_ftp = true # bool | 
-ver = 'ver_example' # str | 
+ver = swagger_client.ModelInt() # ModelInt | 
 
 try:
     # Ставит XML в очередь для последующей отправки в СМЭВ3
@@ -51,7 +51,7 @@ Name | Type | Description  | Notes
  **reply_to** | **str**|  | 
  **zip** | **str**|  | 
  **by_ftp** | **bool**|  | 
- **ver** | **str**|  | 
+ **ver** | [**ModelInt**](.md)|  | 
 
 ### Return type
 
