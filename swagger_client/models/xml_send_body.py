@@ -32,6 +32,7 @@ class XmlSendBody(object):
         'message_id': 'str',
         'reply_to': 'str',
         'zip': 'str',
+        'test': 'bool',
         'by_ftp': 'bool',
         'ver': 'ModelInt'
     }
@@ -41,16 +42,18 @@ class XmlSendBody(object):
         'message_id': 'message_id',
         'reply_to': 'reply_to',
         'zip': 'zip',
+        'test': 'test',
         'by_ftp': 'by_ftp',
         'ver': 'ver'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, by_ftp=None, ver=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
         self._reply_to = None
         self._zip = None
+        self._test = None
         self._by_ftp = None
         self._ver = None
         self.discriminator = None
@@ -61,6 +64,8 @@ class XmlSendBody(object):
             self.reply_to = reply_to
         if zip is not None:
             self.zip = zip
+        if test is not None:
+            self.test = test
         if by_ftp is not None:
             self.by_ftp = by_ftp
         if ver is not None:
@@ -159,6 +164,29 @@ class XmlSendBody(object):
         """
 
         self._zip = zip
+
+    @property
+    def test(self):
+        """Gets the test of this XmlSendBody.  # noqa: E501
+
+        тестовая отправка для работы через эмулятор  # noqa: E501
+
+        :return: The test of this XmlSendBody.  # noqa: E501
+        :rtype: bool
+        """
+        return self._test
+
+    @test.setter
+    def test(self, test):
+        """Sets the test of this XmlSendBody.
+
+        тестовая отправка для работы через эмулятор  # noqa: E501
+
+        :param test: The test of this XmlSendBody.  # noqa: E501
+        :type: bool
+        """
+
+        self._test = test
 
     @property
     def by_ftp(self):
