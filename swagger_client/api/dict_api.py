@@ -127,13 +127,13 @@ class DictApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def dict_0(self, slug, code, **kwargs):  # noqa: E501
+    def dict_patch(self, slug, code, **kwargs):  # noqa: E501
         """Обновляет данные справочника  # noqa: E501
 
         Обновляет данные справочника  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.dict_0(slug, code, async_req=True)
+        >>> thread = api.dict_patch(slug, code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -145,18 +145,18 @@ class DictApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.dict_0_with_http_info(slug, code, **kwargs)  # noqa: E501
+            return self.dict_patch_with_http_info(slug, code, **kwargs)  # noqa: E501
         else:
-            (data) = self.dict_0_with_http_info(slug, code, **kwargs)  # noqa: E501
+            (data) = self.dict_patch_with_http_info(slug, code, **kwargs)  # noqa: E501
             return data
 
-    def dict_0_with_http_info(self, slug, code, **kwargs):  # noqa: E501
+    def dict_patch_with_http_info(self, slug, code, **kwargs):  # noqa: E501
         """Обновляет данные справочника  # noqa: E501
 
         Обновляет данные справочника  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.dict_0_with_http_info(slug, code, async_req=True)
+        >>> thread = api.dict_patch_with_http_info(slug, code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -178,18 +178,18 @@ class DictApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method dict_0" % key
+                    " to method dict_patch" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'slug' is set
         if ('slug' not in params or
                 params['slug'] is None):
-            raise ValueError("Missing the required parameter `slug` when calling `dict_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `slug` when calling `dict_patch`")  # noqa: E501
         # verify the required parameter 'code' is set
         if ('code' not in params or
                 params['code'] is None):
-            raise ValueError("Missing the required parameter `code` when calling `dict_0`")  # noqa: E501
+            raise ValueError("Missing the required parameter `code` when calling `dict_patch`")  # noqa: E501
 
         collection_formats = {}
 
@@ -230,13 +230,13 @@ class DictApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def dict_upd(self, slug, code, **kwargs):  # noqa: E501
+    def dict_put(self, slug, code, **kwargs):  # noqa: E501
         """Обновляет данные справочника  # noqa: E501
 
         Обновляет данные справочника  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.dict_upd(slug, code, async_req=True)
+        >>> thread = api.dict_put(slug, code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -248,18 +248,18 @@ class DictApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.dict_upd_with_http_info(slug, code, **kwargs)  # noqa: E501
+            return self.dict_put_with_http_info(slug, code, **kwargs)  # noqa: E501
         else:
-            (data) = self.dict_upd_with_http_info(slug, code, **kwargs)  # noqa: E501
+            (data) = self.dict_put_with_http_info(slug, code, **kwargs)  # noqa: E501
             return data
 
-    def dict_upd_with_http_info(self, slug, code, **kwargs):  # noqa: E501
+    def dict_put_with_http_info(self, slug, code, **kwargs):  # noqa: E501
         """Обновляет данные справочника  # noqa: E501
 
         Обновляет данные справочника  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.dict_upd_with_http_info(slug, code, async_req=True)
+        >>> thread = api.dict_put_with_http_info(slug, code, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -281,18 +281,18 @@ class DictApi(object):
             if key not in all_params:
                 raise TypeError(
                     "Got an unexpected keyword argument '%s'"
-                    " to method dict_upd" % key
+                    " to method dict_put" % key
                 )
             params[key] = val
         del params['kwargs']
         # verify the required parameter 'slug' is set
         if ('slug' not in params or
                 params['slug'] is None):
-            raise ValueError("Missing the required parameter `slug` when calling `dict_upd`")  # noqa: E501
+            raise ValueError("Missing the required parameter `slug` when calling `dict_put`")  # noqa: E501
         # verify the required parameter 'code' is set
         if ('code' not in params or
                 params['code'] is None):
-            raise ValueError("Missing the required parameter `code` when calling `dict_upd`")  # noqa: E501
+            raise ValueError("Missing the required parameter `code` when calling `dict_put`")  # noqa: E501
 
         collection_formats = {}
 

@@ -5,8 +5,8 @@ All URIs are relative to *http://rsmev.yarcloud.ru/api*
 Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dict**](DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
-[**dict_0**](DictApi.md#dict_0) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
-[**dict_upd**](DictApi.md#dict_upd) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
+[**dict_patch**](DictApi.md#dict_patch) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
+[**dict_put**](DictApi.md#dict_put) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
 
 # **dict**
 > DictResult dict(slug)
@@ -60,8 +60,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dict_0**
-> DictResult dict_0(slug, code)
+# **dict_patch**
+> DictResult dict_patch(slug, code)
 
 Обновляет данные справочника
 
@@ -86,10 +86,10 @@ code = 'code_example' # str | Идентификатор эл-та справо�
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_0(slug, code)
+    api_response = api_instance.dict_patch(slug, code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DictApi->dict_0: %s\n" % e)
+    print("Exception when calling DictApi->dict_patch: %s\n" % e)
 ```
 
 ### Parameters
@@ -114,8 +114,8 @@ Name | Type | Description  | Notes
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
-# **dict_upd**
-> DictResult dict_upd(slug, code)
+# **dict_put**
+> DictResult dict_put(slug, code)
 
 Обновляет данные справочника
 
@@ -140,10 +140,10 @@ code = 'code_example' # str | Идентификатор эл-та справо�
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_upd(slug, code)
+    api_response = api_instance.dict_put(slug, code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DictApi->dict_upd: %s\n" % e)
+    print("Exception when calling DictApi->dict_put: %s\n" % e)
 ```
 
 ### Parameters
