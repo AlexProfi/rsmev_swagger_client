@@ -6,7 +6,7 @@
 git_user_id=$1
 git_repo_id=$2
 release_note=$3
-
+echo $1
 if [ "$git_user_id" = "" ]; then
     git_user_id="AlexProfi"
     echo "[INFO] No command line input provided. Set \$git_user_id to $git_user_id"
