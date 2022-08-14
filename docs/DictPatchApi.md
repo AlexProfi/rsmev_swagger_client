@@ -1,17 +1,17 @@
-# swagger_client.DictApi
+# swagger_client.DictPatchApi
 
 All URIs are relative to *http://rsmev.yarcloud.ru/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------
-[**dict**](DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
+[**dict_patch**](DictPatchApi.md#dict_patch) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
 
-# **dict**
-> DictResult dict(slug)
+# **dict_patch**
+> DictResult dict_patch(slug, code)
 
-Возвращает данные справочника
+Обновляет данные справочника
 
-Возвращает данные справочника
+Обновляет данные справочника
 
 ### Example
 ```python
@@ -26,15 +26,16 @@ configuration.username = 'YOUR_USERNAME'
 configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
-api_instance = swagger_client.DictApi(swagger_client.ApiClient(configuration))
+api_instance = swagger_client.DictPatchApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Символьная метка справочника (например: institution)
+code = 'code_example' # str | Идентификатор эл-та справочника (например: 767890)
 
 try:
-    # Возвращает данные справочника
-    api_response = api_instance.dict(slug)
+    # Обновляет данные справочника
+    api_response = api_instance.dict_patch(slug, code)
     pprint(api_response)
 except ApiException as e:
-    print("Exception when calling DictApi->dict: %s\n" % e)
+    print("Exception when calling DictPatchApi->dict_patch: %s\n" % e)
 ```
 
 ### Parameters
@@ -42,6 +43,7 @@ except ApiException as e:
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Символьная метка справочника (например: institution) | 
+ **code** | **str**| Идентификатор эл-та справочника (например: 767890) | 
 
 ### Return type
 
