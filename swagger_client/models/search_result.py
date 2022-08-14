@@ -31,7 +31,7 @@ class SearchResult(object):
         'pagination': 'SearchResultPagination',
         'columns': 'list[Header]',
         'results': 'list[Row]',
-        'raw_results': 'list[DocumentField]'
+        'raw_results': 'list[Row]'
     }
 
     attribute_map = {
@@ -126,7 +126,7 @@ class SearchResult(object):
 
 
         :return: The raw_results of this SearchResult.  # noqa: E501
-        :rtype: list[DocumentField]
+        :rtype: list[Row]
         """
         return self._raw_results
 
@@ -136,7 +136,7 @@ class SearchResult(object):
 
 
         :param raw_results: The raw_results of this SearchResult.  # noqa: E501
-        :type: list[DocumentField]
+        :type: list[Row]
         """
 
         self._raw_results = raw_results

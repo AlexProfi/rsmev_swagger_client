@@ -180,6 +180,8 @@ Class | Method | HTTP request | Description
 *ApplApi* | [**appl_search_form**](docs/ApplApi.md#appl_search_form) | **GET** /appl/{slug}/searchform/ | Получает список параметров для поиска по заявлениям указанного типа
 *ApplApi* | [**appl_update_status**](docs/ApplApi.md#appl_update_status) | **PUT** /appl/{slug}/{epgu_number}/ | Обновляет статус заявления
 *DictApi* | [**dict**](docs/DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
+*DictApi* | [**dict_0**](docs/DictApi.md#dict_0) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
+*DictApi* | [**dict_upd**](docs/DictApi.md#dict_upd) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
 *TypeinfoApi* | [**ti_search_form**](docs/TypeinfoApi.md#ti_search_form) | **GET** /typeinfo/{slug}/searchform/ | Получает список параметров для поиска по элементам ВС указанного типа
 *TypeinfoApi* | [**typeinfo_list**](docs/TypeinfoApi.md#typeinfo_list) | **POST** /typeinfo/{slug}/ | Получает список данных по ВС, указанному в slug
 *TypeinfoApi* | [**typeinfo_retrieve**](docs/TypeinfoApi.md#typeinfo_retrieve) | **GET** /typeinfo/{slug}/{id}/ | Возвращает элемент по id
