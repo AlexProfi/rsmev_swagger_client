@@ -1,6 +1,6 @@
 # swagger_client.XmlApi
 
-All URIs are relative to *http://rsmev.yarcloud.ru/api*
+All URIs are relative to *http://rsmev.yarcloud.ru:8000/api*
 
 Method | HTTP request | Description
 ------------- | ------------- | -------------

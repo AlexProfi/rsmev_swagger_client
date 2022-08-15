@@ -168,7 +168,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://rsmev.yarcloud.ru/api*
+All URIs are relative to *http://rsmev.yarcloud.ru:8000/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
@@ -179,7 +179,6 @@ Class | Method | HTTP request | Description
 *ApplApi* | [**appl_retrieve**](docs/ApplApi.md#appl_retrieve) | **GET** /appl/{slug}/{epgu_number}/ | Возвращает заявление
 *ApplApi* | [**appl_search_form**](docs/ApplApi.md#appl_search_form) | **GET** /appl/{slug}/searchform/ | Получает список параметров для поиска по заявлениям указанного типа
 *ApplApi* | [**appl_update_status**](docs/ApplApi.md#appl_update_status) | **PUT** /appl/{slug}/{epgu_number}/ | Обновляет статус заявления
-*DefaultApi* | [**users_post**](docs/DefaultApi.md#users_post) | **POST** /users | Creates a new user.
 *DictApi* | [**dict**](docs/DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
 *DictApi* | [**dict_patch**](docs/DictApi.md#dict_patch) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
 *DictApi* | [**dict_put**](docs/DictApi.md#dict_put) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
