@@ -211,6 +211,7 @@ Class | Method | HTTP request | Description
  - [SearchResultPagination](docs/SearchResultPagination.md)
  - [TermField](docs/TermField.md)
  - [UpdateStatus](docs/UpdateStatus.md)
+ - [Uuid](docs/Uuid.md)
  - [XmlSendBody](docs/XmlSendBody.md)
 
 ## Documentation For Authorization

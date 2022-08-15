@@ -45,4 +45,5 @@ from swagger_client.models.search_result import SearchResult
 from swagger_client.models.search_result_pagination import SearchResultPagination
 from swagger_client.models.term_field import TermField
 from swagger_client.models.update_status import UpdateStatus
+from swagger_client.models.uuid import Uuid
 from swagger_client.models.xml_send_body import XmlSendBody
