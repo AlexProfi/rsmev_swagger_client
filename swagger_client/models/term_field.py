@@ -29,7 +29,7 @@ class TermField(object):
     """
     swagger_types = {
         'slug': 'str',
-        'value': 'object'
+        'value': 'str'
     }
 
     attribute_map = {
@@ -77,7 +77,7 @@ class TermField(object):
         search value string  # noqa: E501
 
         :return: The value of this TermField.  # noqa: E501
-        :rtype: object
+        :rtype: str
         """
         return self._value
 
@@ -88,7 +88,7 @@ class TermField(object):
         search value string  # noqa: E501
 
         :param value: The value of this TermField.  # noqa: E501
-        :type: object
+        :type: str
         """
 
         self._value = value

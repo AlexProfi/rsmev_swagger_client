@@ -139,6 +139,7 @@ class DictApi(object):
         :param async_req bool
         :param str slug: Символьная метка справочника (например: institution) (required)
         :param str code: Идентификатор эл-та справочника (например: 767890) (required)
+        :param Sch body: Данные справочника для обновления
         :return: DictResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -162,12 +163,13 @@ class DictApi(object):
         :param async_req bool
         :param str slug: Символьная метка справочника (например: institution) (required)
         :param str code: Идентификатор эл-та справочника (например: 767890) (required)
+        :param Sch body: Данные справочника для обновления
         :return: DictResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['slug', 'code']  # noqa: E501
+        all_params = ['slug', 'code', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -207,8 +209,14 @@ class DictApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting
@@ -242,6 +250,7 @@ class DictApi(object):
         :param async_req bool
         :param str slug: Символьная метка справочника (например: institution) (required)
         :param str code: Идентификатор эл-та справочника (например: 767890) (required)
+        :param Sch body: Данные справочника для обновления
         :return: DictResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -265,12 +274,13 @@ class DictApi(object):
         :param async_req bool
         :param str slug: Символьная метка справочника (например: institution) (required)
         :param str code: Идентификатор эл-та справочника (например: 767890) (required)
+        :param Sch body: Данные справочника для обновления
         :return: DictResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['slug', 'code']  # noqa: E501
+        all_params = ['slug', 'code', 'body']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -310,8 +320,14 @@ class DictApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
+            ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
             ['application/json'])  # noqa: E501
 
         # Authentication setting

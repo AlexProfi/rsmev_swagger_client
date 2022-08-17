@@ -29,6 +29,7 @@ from swagger_client.models.one_of_document_field_value import OneOfDocumentField
 from swagger_client.models.operation_result import OperationResult
 from swagger_client.models.r_column import RColumn
 from swagger_client.models.row import Row
+from swagger_client.models.sch import Sch
 from swagger_client.models.search_form import SearchForm
 from swagger_client.models.search_form_field import SearchFormField
 from swagger_client.models.search_query import SearchQuery

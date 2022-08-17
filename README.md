@@ -204,6 +204,7 @@ Class | Method | HTTP request | Description
  - [OperationResult](docs/OperationResult.md)
  - [RColumn](docs/RColumn.md)
  - [Row](docs/Row.md)
+ - [Sch](docs/Sch.md)
  - [SearchForm](docs/SearchForm.md)
  - [SearchFormField](docs/SearchFormField.md)
  - [SearchQuery](docs/SearchQuery.md)

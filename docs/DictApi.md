@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_patch**
-> DictResult dict_patch(slug, code)
+> DictResult dict_patch(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -83,10 +83,11 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = swagger_client.DictApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Символьная метка справочника (например: institution)
 code = 'code_example' # str | Идентификатор эл-та справочника (например: 767890)
+body = swagger_client.Sch() # Sch | Данные справочника для обновления (optional)
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_patch(slug, code)
+    api_response = api_instance.dict_patch(slug, code, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DictApi->dict_patch: %s\n" % e)
@@ -98,6 +99,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Символьная метка справочника (например: institution) | 
  **code** | **str**| Идентификатор эл-та справочника (например: 767890) | 
+ **body** | [**Sch**](Sch.md)| Данные справочника для обновления | [optional] 
 
 ### Return type
 
@@ -109,13 +111,13 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_put**
-> DictResult dict_put(slug, code)
+> DictResult dict_put(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -137,10 +139,11 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = swagger_client.DictApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Символьная метка справочника (например: institution)
 code = 'code_example' # str | Идентификатор эл-та справочника (например: 767890)
+body = swagger_client.Sch() # Sch | Данные справочника для обновления (optional)
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_put(slug, code)
+    api_response = api_instance.dict_put(slug, code, body=body)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling DictApi->dict_put: %s\n" % e)
@@ -152,6 +155,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Символьная метка справочника (например: institution) | 
  **code** | **str**| Идентификатор эл-та справочника (например: 767890) | 
+ **body** | [**Sch**](Sch.md)| Данные справочника для обновления | [optional] 
 
 ### Return type
 
@@ -163,7 +167,7 @@ Name | Type | Description  | Notes
 
 ### HTTP request headers
 
- - **Content-Type**: Not defined
+ - **Content-Type**: application/json
  - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
