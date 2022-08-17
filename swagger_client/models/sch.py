@@ -40,9 +40,7 @@ class Sch(object):
         'site': 'str',
         'phone': 'str',
         'inn': 'str',
-        'active': 'Bool',
-        'result': 'bool',
-        'message': 'str'
+        'active': 'Bool'
     }
 
     attribute_map = {
@@ -58,12 +56,10 @@ class Sch(object):
         'site': 'site',
         'phone': 'phone',
         'inn': 'inn',
-        'active': 'active',
-        'result': 'result',
-        'message': 'message'
+        'active': 'active'
     }
 
-    def __init__(self, name=None, short_name=None, mr_id=None, fias=None, number=None, oktmo=None, okpo=None, address=None, email=None, site=None, phone=None, inn=None, active=None, result=None, message=None):  # noqa: E501
+    def __init__(self, name=None, short_name=None, mr_id=None, fias=None, number=None, oktmo=None, okpo=None, address=None, email=None, site=None, phone=None, inn=None, active=None):  # noqa: E501
         """Sch - a model defined in Swagger"""  # noqa: E501
         self._name = None
         self._short_name = None
@@ -78,8 +74,6 @@ class Sch(object):
         self._phone = None
         self._inn = None
         self._active = None
-        self._result = None
-        self._message = None
         self.discriminator = None
         if name is not None:
             self.name = name
@@ -107,10 +101,6 @@ class Sch(object):
             self.inn = inn
         if active is not None:
             self.active = active
-        if result is not None:
-            self.result = result
-        if message is not None:
-            self.message = message
 
     @property
     def name(self):
@@ -384,52 +374,6 @@ class Sch(object):
         """
 
         self._active = active
-
-    @property
-    def result(self):
-        """Gets the result of this Sch.  # noqa: E501
-
-        Результат выполнения запроса.   * `true` - успешное выполнение   * `false` - ошибка   # noqa: E501
-
-        :return: The result of this Sch.  # noqa: E501
-        :rtype: bool
-        """
-        return self._result
-
-    @result.setter
-    def result(self, result):
-        """Sets the result of this Sch.
-
-        Результат выполнения запроса.   * `true` - успешное выполнение   * `false` - ошибка   # noqa: E501
-
-        :param result: The result of this Sch.  # noqa: E501
-        :type: bool
-        """
-
-        self._result = result
-
-    @property
-    def message(self):
-        """Gets the message of this Sch.  # noqa: E501
-
-        Текст ошибки (если есть)  # noqa: E501
-
-        :return: The message of this Sch.  # noqa: E501
-        :rtype: str
-        """
-        return self._message
-
-    @message.setter
-    def message(self, message):
-        """Sets the message of this Sch.
-
-        Текст ошибки (если есть)  # noqa: E501
-
-        :param message: The message of this Sch.  # noqa: E501
-        :type: str
-        """
-
-        self._message = message
 
     def to_dict(self):
         """Returns the model properties as a dict"""

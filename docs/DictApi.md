@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_patch**
-> DictResult dict_patch(slug, code, body=body)
+> dict_patch(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -87,8 +87,7 @@ body = swagger_client.Sch() # Sch | Данные справочника для �
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_patch(slug, code, body=body)
-    pprint(api_response)
+    api_instance.dict_patch(slug, code, body=body)
 except ApiException as e:
     print("Exception when calling DictApi->dict_patch: %s\n" % e)
 ```
@@ -103,7 +102,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DictResult**](DictResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -112,12 +111,12 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_put**
-> DictResult dict_put(slug, code, body=body)
+> dict_put(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -143,8 +142,7 @@ body = swagger_client.Sch() # Sch | Данные справочника для �
 
 try:
     # Обновляет данные справочника
-    api_response = api_instance.dict_put(slug, code, body=body)
-    pprint(api_response)
+    api_instance.dict_put(slug, code, body=body)
 except ApiException as e:
     print("Exception when calling DictApi->dict_put: %s\n" % e)
 ```
@@ -159,7 +157,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**DictResult**](DictResult.md)
+void (empty response body)
 
 ### Authorization
 
@@ -168,7 +166,7 @@ Name | Type | Description  | Notes
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: application/json
+ - **Accept**: Not defined
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
