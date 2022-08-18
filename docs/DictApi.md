@@ -61,7 +61,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_patch**
-> dict_patch(slug, code, body=body)
+> InlineResponse200 dict_patch(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -87,7 +87,8 @@ body = swagger_client.Sch() # Sch | Данные справочника для �
 
 try:
     # Обновляет данные справочника
-    api_instance.dict_patch(slug, code, body=body)
+    api_response = api_instance.dict_patch(slug, code, body=body)
+    pprint(api_response)
 except ApiException as e:
     print("Exception when calling DictApi->dict_patch: %s\n" % e)
 ```
@@ -102,7 +103,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-void (empty response body)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -111,7 +112,7 @@ void (empty response body)
 ### HTTP request headers
 
  - **Content-Type**: application/json
- - **Accept**: Not defined
+ - **Accept**: application/json
 
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 

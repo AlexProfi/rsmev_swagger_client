@@ -200,6 +200,7 @@ Class | Method | HTTP request | Description
  - [HColumn](docs/HColumn.md)
  - [Header](docs/Header.md)
  - [HistoryStatus](docs/HistoryStatus.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
  - [OneOfDocumentFieldValue](docs/OneOfDocumentFieldValue.md)
  - [OperationResult](docs/OperationResult.md)
  - [RColumn](docs/RColumn.md)
