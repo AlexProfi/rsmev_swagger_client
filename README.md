@@ -181,6 +181,7 @@ Class | Method | HTTP request | Description
 *ApplApi* | [**appl_update_status**](docs/ApplApi.md#appl_update_status) | **PUT** /appl/{slug}/{epgu_number}/ | Обновляет статус заявления
 *DictApi* | [**dict**](docs/DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
 *DictApi* | [**dict_patch**](docs/DictApi.md#dict_patch) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
+*DictApi* | [**dict_post**](docs/DictApi.md#dict_post) | **POST** /dict/{slug}/ | Обновляет данные справочника
 *DictApi* | [**dict_put**](docs/DictApi.md#dict_put) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
 *TypeinfoApi* | [**ti_search_form**](docs/TypeinfoApi.md#ti_search_form) | **GET** /typeinfo/{slug}/searchform/ | Получает список параметров для поиска по элементам ВС указанного типа
 *TypeinfoApi* | [**typeinfo_list**](docs/TypeinfoApi.md#typeinfo_list) | **POST** /typeinfo/{slug}/ | Получает список данных по ВС, указанному в slug
@@ -201,6 +202,7 @@ Class | Method | HTTP request | Description
  - [Header](docs/Header.md)
  - [HistoryStatus](docs/HistoryStatus.md)
  - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse404](docs/InlineResponse404.md)
  - [OneOfDocumentFieldValue](docs/OneOfDocumentFieldValue.md)
  - [OperationResult](docs/OperationResult.md)
  - [RColumn](docs/RColumn.md)

@@ -6,6 +6,7 @@ Method | HTTP request | Description
 ------------- | ------------- | -------------
 [**dict**](DictApi.md#dict) | **GET** /dict/{slug}/ | Возвращает данные справочника
 [**dict_patch**](DictApi.md#dict_patch) | **PATCH** /dict/{slug}/{code} | Обновляет данные справочника
+[**dict_post**](DictApi.md#dict_post) | **POST** /dict/{slug}/ | Обновляет данные справочника
 [**dict_put**](DictApi.md#dict_put) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
 
 # **dict**
@@ -99,6 +100,60 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Символьная метка справочника (например: institution) | 
  **code** | **str**| Идентификатор эл-та справочника (например: 767890) | 
+ **body** | [**Sch**](Sch.md)| Данные справочника для обновления | [optional] 
+
+### Return type
+
+[**InlineResponse200**](InlineResponse200.md)
+
+### Authorization
+
+[basic](../README.md#basic)
+
+### HTTP request headers
+
+ - **Content-Type**: application/json
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **dict_post**
+> InlineResponse200 dict_post(slug, body=body)
+
+Обновляет данные справочника
+
+Обновляет данные справочника
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: basic
+configuration = swagger_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = swagger_client.DictApi(swagger_client.ApiClient(configuration))
+slug = 'slug_example' # str | Символьная метка справочника (например: institution)
+body = swagger_client.Sch() # Sch | Данные справочника для обновления (optional)
+
+try:
+    # Обновляет данные справочника
+    api_response = api_instance.dict_post(slug, body=body)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling DictApi->dict_post: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slug** | **str**| Символьная метка справочника (например: institution) | 
  **body** | [**Sch**](Sch.md)| Данные справочника для обновления | [optional] 
 
 ### Return type
