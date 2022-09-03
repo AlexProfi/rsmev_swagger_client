@@ -62,7 +62,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_patch**
-> InlineResponse201 dict_patch(slug, code, body=body)
+> InlineResponse200 dict_patch(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -118,7 +118,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_post**
-> InlineResponse201 dict_post(slug, body=body)
+> InlineResponse200 dict_post(slug, body=body)
 
 Обновляет данные справочника
 
@@ -158,7 +158,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 
@@ -172,7 +172,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **dict_put**
-> InlineResponse201 dict_put(slug, code, body=body)
+> InlineResponse200 dict_put(slug, code, body=body)
 
 Обновляет данные справочника
 
@@ -214,7 +214,7 @@ Name | Type | Description  | Notes
 
 ### Return type
 
-[**InlineResponse201**](InlineResponse201.md)
+[**InlineResponse200**](InlineResponse200.md)
 
 ### Authorization
 

@@ -34,7 +34,7 @@ from swagger_client.models.document_field import DocumentField
 from swagger_client.models.h_column import HColumn
 from swagger_client.models.header import Header
 from swagger_client.models.history_status import HistoryStatus
-from swagger_client.models.inline_response201 import InlineResponse201
+from swagger_client.models.inline_response200 import InlineResponse200
 from swagger_client.models.inline_response404 import InlineResponse404
 from swagger_client.models.one_of_document_field_value import OneOfDocumentFieldValue
 from swagger_client.models.operation_result import OperationResult
