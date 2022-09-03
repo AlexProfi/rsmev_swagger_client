@@ -201,7 +201,7 @@ Class | Method | HTTP request | Description
  - [HColumn](docs/HColumn.md)
  - [Header](docs/Header.md)
  - [HistoryStatus](docs/HistoryStatus.md)
- - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse201](docs/InlineResponse201.md)
  - [InlineResponse404](docs/InlineResponse404.md)
  - [OneOfDocumentFieldValue](docs/OneOfDocumentFieldValue.md)
  - [OperationResult](docs/OperationResult.md)
