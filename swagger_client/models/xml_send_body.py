@@ -34,7 +34,9 @@ class XmlSendBody(object):
         'zip': 'str',
         'test': 'bool',
         'by_ftp': 'bool',
-        'ver': 'ModelInt'
+        'ver': 'ModelInt',
+        'ou': 'ModelInt',
+        'mr': 'ModelInt'
     }
 
     attribute_map = {
@@ -44,10 +46,12 @@ class XmlSendBody(object):
         'zip': 'zip',
         'test': 'test',
         'by_ftp': 'by_ftp',
-        'ver': 'ver'
+        'ver': 'ver',
+        'ou': 'ou',
+        'mr': 'mr'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, mr=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -56,6 +60,8 @@ class XmlSendBody(object):
         self._test = None
         self._by_ftp = None
         self._ver = None
+        self._ou = None
+        self._mr = None
         self.discriminator = None
         self.xml = xml
         if message_id is not None:
@@ -70,6 +76,10 @@ class XmlSendBody(object):
             self.by_ftp = by_ftp
         if ver is not None:
             self.ver = ver
+        if ou is not None:
+            self.ou = ou
+        if mr is not None:
+            self.mr = mr
 
     @property
     def xml(self):
@@ -233,6 +243,52 @@ class XmlSendBody(object):
         """
 
         self._ver = ver
+
+    @property
+    def ou(self):
+        """Gets the ou of this XmlSendBody.  # noqa: E501
+
+        Код ОУ  # noqa: E501
+
+        :return: The ou of this XmlSendBody.  # noqa: E501
+        :rtype: ModelInt
+        """
+        return self._ou
+
+    @ou.setter
+    def ou(self, ou):
+        """Sets the ou of this XmlSendBody.
+
+        Код ОУ  # noqa: E501
+
+        :param ou: The ou of this XmlSendBody.  # noqa: E501
+        :type: ModelInt
+        """
+
+        self._ou = ou
+
+    @property
+    def mr(self):
+        """Gets the mr of this XmlSendBody.  # noqa: E501
+
+        Код МР  # noqa: E501
+
+        :return: The mr of this XmlSendBody.  # noqa: E501
+        :rtype: ModelInt
+        """
+        return self._mr
+
+    @mr.setter
+    def mr(self, mr):
+        """Sets the mr of this XmlSendBody.
+
+        Код МР  # noqa: E501
+
+        :param mr: The mr of this XmlSendBody.  # noqa: E501
+        :type: ModelInt
+        """
+
+        self._mr = mr
 
     def to_dict(self):
         """Returns the model properties as a dict"""

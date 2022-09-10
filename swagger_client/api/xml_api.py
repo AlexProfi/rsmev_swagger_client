@@ -32,13 +32,13 @@ class XmlApi(object):
             api_client = ApiClient()
         self.api_client = api_client
 
-    def xml_send(self, xml, message_id, reply_to, zip, test, by_ftp, ver, **kwargs):  # noqa: E501
+    def xml_send(self, xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, **kwargs):  # noqa: E501
         """Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
 
         Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, async_req=True)
+        >>> thread = api.xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -49,24 +49,26 @@ class XmlApi(object):
         :param bool test: (required)
         :param bool by_ftp: (required)
         :param ModelInt ver: (required)
+        :param ModelInt ou: (required)
+        :param ModelInt mr: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, **kwargs)  # noqa: E501
+            return self.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, **kwargs)  # noqa: E501
         else:
-            (data) = self.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, **kwargs)  # noqa: E501
+            (data) = self.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, **kwargs)  # noqa: E501
             return data
 
-    def xml_send_with_http_info(self, xml, message_id, reply_to, zip, test, by_ftp, ver, **kwargs):  # noqa: E501
+    def xml_send_with_http_info(self, xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, **kwargs):  # noqa: E501
         """Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
 
         Ставит XML в очередь для последующей отправки в СМЭВ3  # noqa: E501
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, async_req=True)
+        >>> thread = api.xml_send_with_http_info(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
@@ -77,12 +79,14 @@ class XmlApi(object):
         :param bool test: (required)
         :param bool by_ftp: (required)
         :param ModelInt ver: (required)
+        :param ModelInt ou: (required)
+        :param ModelInt mr: (required)
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'test', 'by_ftp', 'ver']  # noqa: E501
+        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'test', 'by_ftp', 'ver', 'ou', 'mr']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -125,6 +129,14 @@ class XmlApi(object):
         if ('ver' not in params or
                 params['ver'] is None):
             raise ValueError("Missing the required parameter `ver` when calling `xml_send`")  # noqa: E501
+        # verify the required parameter 'ou' is set
+        if ('ou' not in params or
+                params['ou'] is None):
+            raise ValueError("Missing the required parameter `ou` when calling `xml_send`")  # noqa: E501
+        # verify the required parameter 'mr' is set
+        if ('mr' not in params or
+                params['mr'] is None):
+            raise ValueError("Missing the required parameter `mr` when calling `xml_send`")  # noqa: E501
 
         collection_formats = {}
 
@@ -150,6 +162,10 @@ class XmlApi(object):
             form_params.append(('by_ftp', params['by_ftp']))  # noqa: E501
         if 'ver' in params:
             form_params.append(('ver', params['ver']))  # noqa: E501
+        if 'ou' in params:
+            form_params.append(('ou', params['ou']))  # noqa: E501
+        if 'mr' in params:
+            form_params.append(('mr', params['mr']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

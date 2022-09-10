@@ -10,6 +10,8 @@ Name | Type | Description | Notes
 **test** | **bool** | тестовая отправка для работы через эмулятор | [optional] 
 **by_ftp** | **bool** | Отправлять файлы по фтп? Используется в случае использования ФХ при обмене | [optional] 
 **ver** | [**ModelInt**](ModelInt.md) | Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей) | [optional] 
+**ou** | [**ModelInt**](ModelInt.md) | Код ОУ | [optional] 
+**mr** | [**ModelInt**](ModelInt.md) | Код МР | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
