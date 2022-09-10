@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**xml_send**](XmlApi.md#xml_send) | **POST** /xml/send/ | Ставит XML в очередь для последующей отправки в СМЭВ3
 
 # **xml_send**
-> OperationResult xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou)
+> OperationResult xml_send(xml=xml, message_id=message_id, reply_to=reply_to, zip=zip, test=test, by_ftp=by_ftp, ver=ver, ou=ou)
 
 Ставит XML в очередь для последующей отправки в СМЭВ3
 
@@ -27,18 +27,18 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = swagger_client.XmlApi(swagger_client.ApiClient(configuration))
-xml = 'xml_example' # str | 
-message_id = 'message_id_example' # str | 
-reply_to = 'reply_to_example' # str | 
-zip = 'zip_example' # str | 
-test = true # bool | 
-by_ftp = true # bool | 
-ver = swagger_client.ModelInt() # ModelInt | 
-ou = swagger_client.ModelInt() # ModelInt | 
+xml = 'xml_example' # str |  (optional)
+message_id = 'message_id_example' # str |  (optional)
+reply_to = 'reply_to_example' # str |  (optional)
+zip = 'zip_example' # str |  (optional)
+test = true # bool |  (optional)
+by_ftp = true # bool |  (optional)
+ver = swagger_client.ModelInt() # ModelInt |  (optional)
+ou = swagger_client.ModelInt() # ModelInt |  (optional)
 
 try:
     # Ставит XML в очередь для последующей отправки в СМЭВ3
-    api_response = api_instance.xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou)
+    api_response = api_instance.xml_send(xml=xml, message_id=message_id, reply_to=reply_to, zip=zip, test=test, by_ftp=by_ftp, ver=ver, ou=ou)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling XmlApi->xml_send: %s\n" % e)
@@ -48,14 +48,14 @@ except ApiException as e:
 
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
- **xml** | **str**|  | 
- **message_id** | **str**|  | 
- **reply_to** | **str**|  | 
- **zip** | **str**|  | 
- **test** | **bool**|  | 
- **by_ftp** | **bool**|  | 
- **ver** | [**ModelInt**](.md)|  | 
- **ou** | [**ModelInt**](.md)|  | 
+ **xml** | **str**|  | [optional] 
+ **message_id** | **str**|  | [optional] 
+ **reply_to** | **str**|  | [optional] 
+ **zip** | **str**|  | [optional] 
+ **test** | **bool**|  | [optional] 
+ **by_ftp** | **bool**|  | [optional] 
+ **ver** | [**ModelInt**](.md)|  | [optional] 
+ **ou** | [**ModelInt**](.md)|  | [optional] 
 
 ### Return type
 
