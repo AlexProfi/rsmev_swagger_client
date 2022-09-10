@@ -7,7 +7,7 @@ Method | HTTP request | Description
 [**xml_send**](XmlApi.md#xml_send) | **POST** /xml/send/ | Ставит XML в очередь для последующей отправки в СМЭВ3
 
 # **xml_send**
-> OperationResult xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr)
+> OperationResult xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou)
 
 Ставит XML в очередь для последующей отправки в СМЭВ3
 
@@ -35,11 +35,10 @@ test = true # bool |
 by_ftp = true # bool | 
 ver = swagger_client.ModelInt() # ModelInt | 
 ou = swagger_client.ModelInt() # ModelInt | 
-mr = swagger_client.ModelInt() # ModelInt | 
 
 try:
     # Ставит XML в очередь для последующей отправки в СМЭВ3
-    api_response = api_instance.xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou, mr)
+    api_response = api_instance.xml_send(xml, message_id, reply_to, zip, test, by_ftp, ver, ou)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling XmlApi->xml_send: %s\n" % e)
@@ -57,7 +56,6 @@ Name | Type | Description  | Notes
  **by_ftp** | **bool**|  | 
  **ver** | [**ModelInt**](.md)|  | 
  **ou** | [**ModelInt**](.md)|  | 
- **mr** | [**ModelInt**](.md)|  | 
 
 ### Return type
 
