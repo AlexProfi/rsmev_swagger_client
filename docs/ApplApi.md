@@ -7,6 +7,7 @@ Method | HTTP request | Description
 [**appl_count**](ApplApi.md#appl_count) | **POST** /appl/{slug}/count/ | Возвращает кол-во заявлений указанного типа в разных статусах
 [**appl_file**](ApplApi.md#appl_file) | **GET** /appl/{slug}/{epgu_number}/file/ | Возвращает файл
 [**appl_history_status**](ApplApi.md#appl_history_status) | **GET** /appl/{slug}/{epgu_number}/history/ | Возвращает историю статусов заявления
+[**appl_history_status_all**](ApplApi.md#appl_history_status_all) | **GET** /appl/{slug}/history_all/ | Возвращает историю статусов заявления
 [**appl_list**](ApplApi.md#appl_list) | **POST** /appl/{slug}/ | Получает список заявлений указанного типа
 [**appl_retrieve**](ApplApi.md#appl_retrieve) | **GET** /appl/{slug}/{epgu_number}/ | Возвращает заявление
 [**appl_search_form**](ApplApi.md#appl_search_form) | **GET** /appl/{slug}/searchform/ | Получает список параметров для поиска по заявлениям указанного типа
@@ -157,6 +158,58 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Тип заявления (например: appl-sch-enroll) | 
  **epgu_number** | **str**| Номер заявления ЕПГУ | 
+ **filter_state** | **int**| Фильтр по состоянию статуса | [optional] 
+
+### Return type
+
+[**list[HistoryStatus]**](HistoryStatus.md)
+
+### Authorization
+
+[basic](../README.md#basic)
+
+### HTTP request headers
+
+ - **Content-Type**: Not defined
+ - **Accept**: application/json
+
+[[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
+
+# **appl_history_status_all**
+> list[HistoryStatus] appl_history_status_all(slug, filter_state=filter_state)
+
+Возвращает историю статусов заявления
+
+### Example
+```python
+from __future__ import print_function
+import time
+import swagger_client
+from swagger_client.rest import ApiException
+from pprint import pprint
+# Configure HTTP basic authorization: basic
+configuration = swagger_client.Configuration()
+configuration.username = 'YOUR_USERNAME'
+configuration.password = 'YOUR_PASSWORD'
+
+# create an instance of the API class
+api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
+slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
+filter_state = 56 # int | Фильтр по состоянию статуса (optional)
+
+try:
+    # Возвращает историю статусов заявления
+    api_response = api_instance.appl_history_status_all(slug, filter_state=filter_state)
+    pprint(api_response)
+except ApiException as e:
+    print("Exception when calling ApplApi->appl_history_status_all: %s\n" % e)
+```
+
+### Parameters
+
+Name | Type | Description  | Notes
+------------- | ------------- | ------------- | -------------
+ **slug** | **str**| Тип заявления (например: appl-sch-enroll) | 
  **filter_state** | **int**| Фильтр по состоянию статуса | [optional] 
 
 ### Return type
