@@ -31,6 +31,7 @@ class HistoryStatus(object):
         'status': 'int',
         'comment': 'str',
         'state': 'int',
+        'epgu_number': 'str',
         'state_name': 'str',
         'state_message': 'str',
         'date_occured': 'str'
@@ -40,16 +41,18 @@ class HistoryStatus(object):
         'status': 'status',
         'comment': 'comment',
         'state': 'state',
+        'epgu_number': 'epgu_number',
         'state_name': 'state_name',
         'state_message': 'state_message',
         'date_occured': 'date_occured'
     }
 
-    def __init__(self, status=None, comment=None, state=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
+    def __init__(self, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
         """HistoryStatus - a model defined in Swagger"""  # noqa: E501
         self._status = None
         self._comment = None
         self._state = None
+        self._epgu_number = None
         self._state_name = None
         self._state_message = None
         self._date_occured = None
@@ -60,6 +63,8 @@ class HistoryStatus(object):
             self.comment = comment
         if state is not None:
             self.state = state
+        if epgu_number is not None:
+            self.epgu_number = epgu_number
         if state_name is not None:
             self.state_name = state_name
         if state_message is not None:
@@ -135,6 +140,29 @@ class HistoryStatus(object):
         """
 
         self._state = state
+
+    @property
+    def epgu_number(self):
+        """Gets the epgu_number of this HistoryStatus.  # noqa: E501
+
+        Номер епгу  # noqa: E501
+
+        :return: The epgu_number of this HistoryStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._epgu_number
+
+    @epgu_number.setter
+    def epgu_number(self, epgu_number):
+        """Sets the epgu_number of this HistoryStatus.
+
+        Номер епгу  # noqa: E501
+
+        :param epgu_number: The epgu_number of this HistoryStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._epgu_number = epgu_number
 
     @property
     def state_name(self):
