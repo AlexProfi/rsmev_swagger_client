@@ -107,12 +107,13 @@ configuration.password = 'YOUR_PASSWORD'
 
 # create an instance of the API class
 api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
+body = swagger_client.Document() # Document | Статус для обновления
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 filter_state = 56 # int | Фильтр по состоянию статуса (optional)
 
 try:
     # Возвращает историю статусов заявления
-    api_response = api_instance.appl_history_status_all(slug, filter_state=filter_state)
+    api_response = api_instance.appl_history_status_all(body, slug, filter_state=filter_state)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApplApi->appl_history_status_all: %s\n" % e)
@@ -191,7 +192,7 @@ Class | Method | HTTP request | Description
 *ApplApi* | [**appl_count**](docs/ApplApi.md#appl_count) | **POST** /appl/{slug}/count/ | Возвращает кол-во заявлений указанного типа в разных статусах
 *ApplApi* | [**appl_file**](docs/ApplApi.md#appl_file) | **GET** /appl/{slug}/{epgu_number}/file/ | Возвращает файл
 *ApplApi* | [**appl_history_status**](docs/ApplApi.md#appl_history_status) | **GET** /appl/{slug}/{epgu_number}/history/ | Возвращает историю статусов заявления
-*ApplApi* | [**appl_history_status_all**](docs/ApplApi.md#appl_history_status_all) | **GET** /appl/{slug}/history_all/ | Возвращает историю статусов заявления
+*ApplApi* | [**appl_history_status_all**](docs/ApplApi.md#appl_history_status_all) | **POST** /appl/{slug}/history_all/ | Возвращает историю статусов заявления
 *ApplApi* | [**appl_list**](docs/ApplApi.md#appl_list) | **POST** /appl/{slug}/ | Получает список заявлений указанного типа
 *ApplApi* | [**appl_retrieve**](docs/ApplApi.md#appl_retrieve) | **GET** /appl/{slug}/{epgu_number}/ | Возвращает заявление
 *ApplApi* | [**appl_search_form**](docs/ApplApi.md#appl_search_form) | **GET** /appl/{slug}/searchform/ | Получает список параметров для поиска по заявлениям указанного типа

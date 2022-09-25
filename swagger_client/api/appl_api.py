@@ -349,15 +349,16 @@ class ApplApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def appl_history_status_all(self, slug, **kwargs):  # noqa: E501
+    def appl_history_status_all(self, body, slug, **kwargs):  # noqa: E501
         """Возвращает историю статусов заявления  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.appl_history_status_all(slug, async_req=True)
+        >>> thread = api.appl_history_status_all(body, slug, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param Document body: Статус для обновления (required)
         :param str slug: Тип заявления (например: appl-sch-enroll) (required)
         :param int filter_state: Фильтр по состоянию статуса
         :return: list[HistoryStatus]
@@ -366,20 +367,21 @@ class ApplApi(object):
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.appl_history_status_all_with_http_info(slug, **kwargs)  # noqa: E501
+            return self.appl_history_status_all_with_http_info(body, slug, **kwargs)  # noqa: E501
         else:
-            (data) = self.appl_history_status_all_with_http_info(slug, **kwargs)  # noqa: E501
+            (data) = self.appl_history_status_all_with_http_info(body, slug, **kwargs)  # noqa: E501
             return data
 
-    def appl_history_status_all_with_http_info(self, slug, **kwargs):  # noqa: E501
+    def appl_history_status_all_with_http_info(self, body, slug, **kwargs):  # noqa: E501
         """Возвращает историю статусов заявления  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.appl_history_status_all_with_http_info(slug, async_req=True)
+        >>> thread = api.appl_history_status_all_with_http_info(body, slug, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
+        :param Document body: Статус для обновления (required)
         :param str slug: Тип заявления (например: appl-sch-enroll) (required)
         :param int filter_state: Фильтр по состоянию статуса
         :return: list[HistoryStatus]
@@ -387,7 +389,7 @@ class ApplApi(object):
                  returns the request thread.
         """
 
-        all_params = ['slug', 'filter_state']  # noqa: E501
+        all_params = ['body', 'slug', 'filter_state']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -402,6 +404,10 @@ class ApplApi(object):
                 )
             params[key] = val
         del params['kwargs']
+        # verify the required parameter 'body' is set
+        if ('body' not in params or
+                params['body'] is None):
+            raise ValueError("Missing the required parameter `body` when calling `appl_history_status_all`")  # noqa: E501
         # verify the required parameter 'slug' is set
         if ('slug' not in params or
                 params['slug'] is None):
@@ -423,15 +429,21 @@ class ApplApi(object):
         local_var_files = {}
 
         body_params = None
+        if 'body' in params:
+            body_params = params['body']
         # HTTP header `Accept`
         header_params['Accept'] = self.api_client.select_header_accept(
             ['application/json'])  # noqa: E501
+
+        # HTTP header `Content-Type`
+        header_params['Content-Type'] = self.api_client.select_header_content_type(  # noqa: E501
+            ['*/*'])  # noqa: E501
 
         # Authentication setting
         auth_settings = ['basic']  # noqa: E501
 
         return self.api_client.call_api(
-            '/appl/{slug}/history_all/', 'GET',
+            '/appl/{slug}/history_all/', 'POST',
             path_params,
             query_params,
             header_params,
