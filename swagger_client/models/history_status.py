@@ -28,6 +28,7 @@ class HistoryStatus(object):
                             and the value is json key in definition.
     """
     swagger_types = {
+        'id': 'str',
         'status': 'int',
         'comment': 'str',
         'state': 'int',
@@ -38,6 +39,7 @@ class HistoryStatus(object):
     }
 
     attribute_map = {
+        'id': 'id',
         'status': 'status',
         'comment': 'comment',
         'state': 'state',
@@ -47,8 +49,9 @@ class HistoryStatus(object):
         'date_occured': 'date_occured'
     }
 
-    def __init__(self, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
+    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
         """HistoryStatus - a model defined in Swagger"""  # noqa: E501
+        self._id = None
         self._status = None
         self._comment = None
         self._state = None
@@ -57,6 +60,8 @@ class HistoryStatus(object):
         self._state_message = None
         self._date_occured = None
         self.discriminator = None
+        if id is not None:
+            self.id = id
         if status is not None:
             self.status = status
         if comment is not None:
@@ -71,6 +76,29 @@ class HistoryStatus(object):
             self.state_message = state_message
         if date_occured is not None:
             self.date_occured = date_occured
+
+    @property
+    def id(self):
+        """Gets the id of this HistoryStatus.  # noqa: E501
+
+        id  # noqa: E501
+
+        :return: The id of this HistoryStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._id
+
+    @id.setter
+    def id(self, id):
+        """Sets the id of this HistoryStatus.
+
+        id  # noqa: E501
+
+        :param id: The id of this HistoryStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._id = id
 
     @property
     def status(self):
