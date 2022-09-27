@@ -35,7 +35,8 @@ class XmlSendBody(object):
         'test': 'bool',
         'by_ftp': 'bool',
         'ver': 'ModelInt',
-        'ou': 'ModelInt'
+        'ou': 'ModelInt',
+        'status': 'ModelInt'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class XmlSendBody(object):
         'test': 'test',
         'by_ftp': 'by_ftp',
         'ver': 'ver',
-        'ou': 'ou'
+        'ou': 'ou',
+        'status': 'status'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, status=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -59,6 +61,7 @@ class XmlSendBody(object):
         self._by_ftp = None
         self._ver = None
         self._ou = None
+        self._status = None
         self.discriminator = None
         self.xml = xml
         if message_id is not None:
@@ -75,6 +78,8 @@ class XmlSendBody(object):
             self.ver = ver
         if ou is not None:
             self.ou = ou
+        if status is not None:
+            self.status = status
 
     @property
     def xml(self):
@@ -261,6 +266,29 @@ class XmlSendBody(object):
         """
 
         self._ou = ou
+
+    @property
+    def status(self):
+        """Gets the status of this XmlSendBody.  # noqa: E501
+
+        Статус  # noqa: E501
+
+        :return: The status of this XmlSendBody.  # noqa: E501
+        :rtype: ModelInt
+        """
+        return self._status
+
+    @status.setter
+    def status(self, status):
+        """Sets the status of this XmlSendBody.
+
+        Статус  # noqa: E501
+
+        :param status: The status of this XmlSendBody.  # noqa: E501
+        :type: ModelInt
+        """
+
+        self._status = status
 
     def to_dict(self):
         """Returns the model properties as a dict"""
