@@ -31,6 +31,7 @@ class SearchFormField(object):
         'slug': 'str',
         'field': 'str',
         'title': 'str',
+        'help_text': 'str',
         'qs': 'list'
     }
 
@@ -38,14 +39,16 @@ class SearchFormField(object):
         'slug': 'slug',
         'field': 'field',
         'title': 'title',
+        'help_text': 'help_text',
         'qs': 'qs'
     }
 
-    def __init__(self, slug=None, field=None, title=None, qs=None):  # noqa: E501
+    def __init__(self, slug=None, field=None, title=None, help_text=None, qs=None):  # noqa: E501
         """SearchFormField - a model defined in Swagger"""  # noqa: E501
         self._slug = None
         self._field = None
         self._title = None
+        self._help_text = None
         self._qs = None
         self.discriminator = None
         if slug is not None:
@@ -54,6 +57,8 @@ class SearchFormField(object):
             self.field = field
         if title is not None:
             self.title = title
+        if help_text is not None:
+            self.help_text = help_text
         if qs is not None:
             self.qs = qs
 
@@ -125,6 +130,29 @@ class SearchFormField(object):
         """
 
         self._title = title
+
+    @property
+    def help_text(self):
+        """Gets the help_text of this SearchFormField.  # noqa: E501
+
+        Подсказка  # noqa: E501
+
+        :return: The help_text of this SearchFormField.  # noqa: E501
+        :rtype: str
+        """
+        return self._help_text
+
+    @help_text.setter
+    def help_text(self, help_text):
+        """Sets the help_text of this SearchFormField.
+
+        Подсказка  # noqa: E501
+
+        :param help_text: The help_text of this SearchFormField.  # noqa: E501
+        :type: str
+        """
+
+        self._help_text = help_text
 
     @property
     def qs(self):
