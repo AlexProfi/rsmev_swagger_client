@@ -32,6 +32,7 @@ class HistoryStatus(object):
         'status': 'int',
         'comment': 'str',
         'state': 'int',
+        'result': 'int',
         'epgu_number': 'str',
         'state_name': 'str',
         'state_message': 'str',
@@ -43,18 +44,20 @@ class HistoryStatus(object):
         'status': 'status',
         'comment': 'comment',
         'state': 'state',
+        'result': 'result',
         'epgu_number': 'epgu_number',
         'state_name': 'state_name',
         'state_message': 'state_message',
         'date_occured': 'date_occured'
     }
 
-    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
+    def __init__(self, id=None, status=None, comment=None, state=None, result=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
         """HistoryStatus - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._status = None
         self._comment = None
         self._state = None
+        self._result = None
         self._epgu_number = None
         self._state_name = None
         self._state_message = None
@@ -68,6 +71,8 @@ class HistoryStatus(object):
             self.comment = comment
         if state is not None:
             self.state = state
+        if result is not None:
+            self.result = result
         if epgu_number is not None:
             self.epgu_number = epgu_number
         if state_name is not None:
@@ -168,6 +173,29 @@ class HistoryStatus(object):
         """
 
         self._state = state
+
+    @property
+    def result(self):
+        """Gets the result of this HistoryStatus.  # noqa: E501
+
+        Результат обработки  # noqa: E501
+
+        :return: The result of this HistoryStatus.  # noqa: E501
+        :rtype: int
+        """
+        return self._result
+
+    @result.setter
+    def result(self, result):
+        """Sets the result of this HistoryStatus.
+
+        Результат обработки  # noqa: E501
+
+        :param result: The result of this HistoryStatus.  # noqa: E501
+        :type: int
+        """
+
+        self._result = result
 
     @property
     def epgu_number(self):
