@@ -29,23 +29,28 @@ class HColumn(object):
     """
     swagger_types = {
         'slug': 'str',
-        'title': 'str'
+        'title': 'str',
+        'typ': 'str'
     }
 
     attribute_map = {
         'slug': 'slug',
-        'title': 'title'
+        'title': 'title',
+        'typ': 'typ'
     }
 
-    def __init__(self, slug=None, title=None):  # noqa: E501
+    def __init__(self, slug=None, title=None, typ=None):  # noqa: E501
         """HColumn - a model defined in Swagger"""  # noqa: E501
         self._slug = None
         self._title = None
+        self._typ = None
         self.discriminator = None
         if slug is not None:
             self.slug = slug
         if title is not None:
             self.title = title
+        if typ is not None:
+            self.typ = typ
 
     @property
     def slug(self):
@@ -92,6 +97,29 @@ class HColumn(object):
         """
 
         self._title = title
+
+    @property
+    def typ(self):
+        """Gets the typ of this HColumn.  # noqa: E501
+
+        Тип поля  # noqa: E501
+
+        :return: The typ of this HColumn.  # noqa: E501
+        :rtype: str
+        """
+        return self._typ
+
+    @typ.setter
+    def typ(self, typ):
+        """Sets the typ of this HColumn.
+
+        Тип поля  # noqa: E501
+
+        :param typ: The typ of this HColumn.  # noqa: E501
+        :type: str
+        """
+
+        self._typ = typ
 
     def to_dict(self):
         """Returns the model properties as a dict"""
