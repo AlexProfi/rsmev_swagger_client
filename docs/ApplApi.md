@@ -68,7 +68,7 @@ Name | Type | Description  | Notes
 [[Back to top]](#) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to Model list]](../README.md#documentation-for-models) [[Back to README]](../README.md)
 
 # **appl_file**
-> str appl_file(slug, epgu_number, file_name)
+> str appl_file(slug, epgu_number, file_name=file_name)
 
 Возвращает файл
 
@@ -88,11 +88,11 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
-file_name = 'file_name_example' # str | Имя запрашиваемого файла
+file_name = 'file_name_example' # str | Имя запрашиваемого файла (optional)
 
 try:
     # Возвращает файл
-    api_response = api_instance.appl_file(slug, epgu_number, file_name)
+    api_response = api_instance.appl_file(slug, epgu_number, file_name=file_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApplApi->appl_file: %s\n" % e)
@@ -104,7 +104,7 @@ Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **slug** | **str**| Тип заявления (например: appl-sch-enroll) | 
  **epgu_number** | **str**| Номер заявления ЕПГУ | 
- **file_name** | **str**| Имя запрашиваемого файла | 
+ **file_name** | **str**| Имя запрашиваемого файла | [optional] 
 
 ### Return type
 

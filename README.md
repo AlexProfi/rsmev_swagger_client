@@ -75,11 +75,11 @@ configuration.password = 'YOUR_PASSWORD'
 api_instance = swagger_client.ApplApi(swagger_client.ApiClient(configuration))
 slug = 'slug_example' # str | Тип заявления (например: appl-sch-enroll)
 epgu_number = 'epgu_number_example' # str | Номер заявления ЕПГУ
-file_name = 'file_name_example' # str | Имя запрашиваемого файла
+file_name = 'file_name_example' # str | Имя запрашиваемого файла (optional)
 
 try:
     # Возвращает файл
-    api_response = api_instance.appl_file(slug, epgu_number, file_name)
+    api_response = api_instance.appl_file(slug, epgu_number, file_name=file_name)
     pprint(api_response)
 except ApiException as e:
     print("Exception when calling ApplApi->appl_file: %s\n" % e)

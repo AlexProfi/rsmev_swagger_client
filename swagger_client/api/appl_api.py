@@ -135,41 +135,41 @@ class ApplApi(object):
             _request_timeout=params.get('_request_timeout'),
             collection_formats=collection_formats)
 
-    def appl_file(self, slug, epgu_number, file_name, **kwargs):  # noqa: E501
+    def appl_file(self, slug, epgu_number, **kwargs):  # noqa: E501
         """Возвращает файл  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.appl_file(slug, epgu_number, file_name, async_req=True)
+        >>> thread = api.appl_file(slug, epgu_number, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str slug: Тип заявления (например: appl-sch-enroll) (required)
         :param str epgu_number: Номер заявления ЕПГУ (required)
-        :param str file_name: Имя запрашиваемого файла (required)
+        :param str file_name: Имя запрашиваемого файла
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
         """
         kwargs['_return_http_data_only'] = True
         if kwargs.get('async_req'):
-            return self.appl_file_with_http_info(slug, epgu_number, file_name, **kwargs)  # noqa: E501
+            return self.appl_file_with_http_info(slug, epgu_number, **kwargs)  # noqa: E501
         else:
-            (data) = self.appl_file_with_http_info(slug, epgu_number, file_name, **kwargs)  # noqa: E501
+            (data) = self.appl_file_with_http_info(slug, epgu_number, **kwargs)  # noqa: E501
             return data
 
-    def appl_file_with_http_info(self, slug, epgu_number, file_name, **kwargs):  # noqa: E501
+    def appl_file_with_http_info(self, slug, epgu_number, **kwargs):  # noqa: E501
         """Возвращает файл  # noqa: E501
 
         This method makes a synchronous HTTP request by default. To make an
         asynchronous HTTP request, please pass async_req=True
-        >>> thread = api.appl_file_with_http_info(slug, epgu_number, file_name, async_req=True)
+        >>> thread = api.appl_file_with_http_info(slug, epgu_number, async_req=True)
         >>> result = thread.get()
 
         :param async_req bool
         :param str slug: Тип заявления (например: appl-sch-enroll) (required)
         :param str epgu_number: Номер заявления ЕПГУ (required)
-        :param str file_name: Имя запрашиваемого файла (required)
+        :param str file_name: Имя запрашиваемого файла
         :return: str
                  If the method is called asynchronously,
                  returns the request thread.
@@ -198,10 +198,6 @@ class ApplApi(object):
         if ('epgu_number' not in params or
                 params['epgu_number'] is None):
             raise ValueError("Missing the required parameter `epgu_number` when calling `appl_file`")  # noqa: E501
-        # verify the required parameter 'file_name' is set
-        if ('file_name' not in params or
-                params['file_name'] is None):
-            raise ValueError("Missing the required parameter `file_name` when calling `appl_file`")  # noqa: E501
 
         collection_formats = {}
 
