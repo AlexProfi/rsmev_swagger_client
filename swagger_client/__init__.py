@@ -17,6 +17,7 @@ from __future__ import absolute_import
 # import apis into sdk package
 from swagger_client.api.appl_api import ApplApi
 from swagger_client.api.dict_api import DictApi
+from swagger_client.api.info_api import InfoApi
 from swagger_client.api.typeinfo_api import TypeinfoApi
 from swagger_client.api.xml_api import XmlApi
 # import ApiClient
@@ -34,6 +35,8 @@ from swagger_client.models.document_field import DocumentField
 from swagger_client.models.h_column import HColumn
 from swagger_client.models.header import Header
 from swagger_client.models.history_status import HistoryStatus
+from swagger_client.models.info_history_status import InfoHistoryStatus
+from swagger_client.models.info_history_status_message import InfoHistoryStatusMessage
 from swagger_client.models.inline_response200 import InlineResponse200
 from swagger_client.models.inline_response404 import InlineResponse404
 from swagger_client.models.one_of_document_field_value import OneOfDocumentFieldValue

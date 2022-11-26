@@ -225,7 +225,7 @@ class XmlSendBody(object):
     def ver(self):
         """Gets the ver of this XmlSendBody.  # noqa: E501
 
-        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
+        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в 1, 0 - отправка посредником)  # noqa: E501
 
         :return: The ver of this XmlSendBody.  # noqa: E501
         :rtype: ModelInt
@@ -236,7 +236,7 @@ class XmlSendBody(object):
     def ver(self, ver):
         """Sets the ver of this XmlSendBody.
 
-        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в предыдущей)  # noqa: E501
+        Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в 1, 0 - отправка посредником)  # noqa: E501
 
         :param ver: The ver of this XmlSendBody.  # noqa: E501
         :type: ModelInt
