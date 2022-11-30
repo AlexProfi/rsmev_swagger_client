@@ -31,7 +31,7 @@ class InfoHistoryStatusMessage(object):
         'id': 'str',
         'ref_id': 'str',
         'smev_id': 'str',
-        'is_ack': 'Bool',
+        'is_ack': 'bool',
         'xml': 'str',
         'desc': 'str',
         'system_date': 'str',
@@ -150,7 +150,7 @@ class InfoHistoryStatusMessage(object):
 
 
         :return: The is_ack of this InfoHistoryStatusMessage.  # noqa: E501
-        :rtype: Bool
+        :rtype: bool
         """
         return self._is_ack
 
@@ -160,7 +160,7 @@ class InfoHistoryStatusMessage(object):
 
 
         :param is_ack: The is_ack of this InfoHistoryStatusMessage.  # noqa: E501
-        :type: Bool
+        :type: bool
         """
 
         self._is_ack = is_ack

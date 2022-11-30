@@ -6,7 +6,7 @@ Name | Type | Description | Notes
 **id** | **str** | id | [optional] 
 **ref_id** | **str** | id | [optional] 
 **smev_id** | **str** |  | [optional] 
-**is_ack** | [**Bool**](Bool.md) |  | [optional] 
+**is_ack** | **bool** |  | [optional] 
 **xml** | **str** | xml сообщение | [optional] 
 **desc** | **str** | Произвольный комментарий к статусу | [optional] 
 **system_date** | **str** | Дата и время сохранения лога (UTC) | [optional] 

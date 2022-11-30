@@ -40,7 +40,7 @@ class Sch(object):
         'site': 'str',
         'phone': 'str',
         'inn': 'str',
-        'active': 'Bool'
+        'active': 'bool'
     }
 
     attribute_map = {
@@ -360,7 +360,7 @@ class Sch(object):
 
 
         :return: The active of this Sch.  # noqa: E501
-        :rtype: Bool
+        :rtype: bool
         """
         return self._active
 
@@ -370,7 +370,7 @@ class Sch(object):
 
 
         :param active: The active of this Sch.  # noqa: E501
-        :type: Bool
+        :type: bool
         """
 
         self._active = active
