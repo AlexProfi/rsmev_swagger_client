@@ -35,7 +35,8 @@ class HistoryStatus(object):
         'epgu_number': 'str',
         'state_name': 'str',
         'state_message': 'str',
-        'date_occured': 'str'
+        'date_occured': 'str',
+        'reply_to': 'str'
     }
 
     attribute_map = {
@@ -46,10 +47,11 @@ class HistoryStatus(object):
         'epgu_number': 'epgu_number',
         'state_name': 'state_name',
         'state_message': 'state_message',
-        'date_occured': 'date_occured'
+        'date_occured': 'date_occured',
+        'reply_to': 'reply_to'
     }
 
-    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
+    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None, reply_to=None):  # noqa: E501
         """HistoryStatus - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._status = None
@@ -59,6 +61,7 @@ class HistoryStatus(object):
         self._state_name = None
         self._state_message = None
         self._date_occured = None
+        self._reply_to = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -76,6 +79,8 @@ class HistoryStatus(object):
             self.state_message = state_message
         if date_occured is not None:
             self.date_occured = date_occured
+        if reply_to is not None:
+            self.reply_to = reply_to
 
     @property
     def id(self):
@@ -260,6 +265,29 @@ class HistoryStatus(object):
         """
 
         self._date_occured = date_occured
+
+    @property
+    def reply_to(self):
+        """Gets the reply_to of this HistoryStatus.  # noqa: E501
+
+        ReplyTo  # noqa: E501
+
+        :return: The reply_to of this HistoryStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._reply_to
+
+    @reply_to.setter
+    def reply_to(self, reply_to):
+        """Sets the reply_to of this HistoryStatus.
+
+        ReplyTo  # noqa: E501
+
+        :param reply_to: The reply_to of this HistoryStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._reply_to = reply_to
 
     def to_dict(self):
         """Returns the model properties as a dict"""
