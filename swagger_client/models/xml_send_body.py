@@ -36,7 +36,8 @@ class XmlSendBody(object):
         'by_ftp': 'bool',
         'ver': 'ModelInt',
         'ou': 'ModelInt',
-        'status': 'ModelInt'
+        'status': 'ModelInt',
+        'send_type': 'str'
     }
 
     attribute_map = {
@@ -48,10 +49,11 @@ class XmlSendBody(object):
         'by_ftp': 'by_ftp',
         'ver': 'ver',
         'ou': 'ou',
-        'status': 'status'
+        'status': 'status',
+        'send_type': 'send_type'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, status=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, status=None, send_type=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -62,6 +64,7 @@ class XmlSendBody(object):
         self._ver = None
         self._ou = None
         self._status = None
+        self._send_type = None
         self.discriminator = None
         self.xml = xml
         if message_id is not None:
@@ -80,6 +83,8 @@ class XmlSendBody(object):
             self.ou = ou
         if status is not None:
             self.status = status
+        if send_type is not None:
+            self.send_type = send_type
 
     @property
     def xml(self):
@@ -289,6 +294,29 @@ class XmlSendBody(object):
         """
 
         self._status = status
+
+    @property
+    def send_type(self):
+        """Gets the send_type of this XmlSendBody.  # noqa: E501
+
+        Тип отправки  # noqa: E501
+
+        :return: The send_type of this XmlSendBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._send_type
+
+    @send_type.setter
+    def send_type(self, send_type):
+        """Sets the send_type of this XmlSendBody.
+
+        Тип отправки  # noqa: E501
+
+        :param send_type: The send_type of this XmlSendBody.  # noqa: E501
+        :type: str
+        """
+
+        self._send_type = send_type
 
     def to_dict(self):
         """Returns the model properties as a dict"""

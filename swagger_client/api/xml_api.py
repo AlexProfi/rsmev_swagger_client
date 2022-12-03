@@ -51,6 +51,7 @@ class XmlApi(object):
         :param ModelInt ver:
         :param ModelInt ou:
         :param ModelInt status:
+        :param str send_type:
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
@@ -81,12 +82,13 @@ class XmlApi(object):
         :param ModelInt ver:
         :param ModelInt ou:
         :param ModelInt status:
+        :param str send_type:
         :return: OperationResult
                  If the method is called asynchronously,
                  returns the request thread.
         """
 
-        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'test', 'by_ftp', 'ver', 'ou', 'status']  # noqa: E501
+        all_params = ['xml', 'message_id', 'reply_to', 'zip', 'test', 'by_ftp', 'ver', 'ou', 'status', 'send_type']  # noqa: E501
         all_params.append('async_req')
         all_params.append('_return_http_data_only')
         all_params.append('_preload_content')
@@ -130,6 +132,8 @@ class XmlApi(object):
             form_params.append(('ou', params['ou']))  # noqa: E501
         if 'status' in params:
             form_params.append(('status', params['status']))  # noqa: E501
+        if 'send_type' in params:
+            form_params.append(('send_type', params['send_type']))  # noqa: E501
 
         body_params = None
         # HTTP header `Accept`

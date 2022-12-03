@@ -12,6 +12,7 @@ Name | Type | Description | Notes
 **ver** | [**ModelInt**](ModelInt.md) | Версия метода (2 используется для именования услуг на базе пути в схеме а не корневого элемента, как в 1, 0 - отправка посредником) | [optional] 
 **ou** | [**ModelInt**](ModelInt.md) | Код ОУ | [optional] 
 **status** | [**ModelInt**](ModelInt.md) | Статус | [optional] 
+**send_type** | **str** | Тип отправки | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 
