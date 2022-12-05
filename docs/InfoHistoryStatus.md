@@ -5,6 +5,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **id** | **str** | id | [optional] 
 **message** | [**InfoHistoryStatusMessage**](InfoHistoryStatusMessage.md) |  | [optional] 
+**message_type** | **str** | Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием  | [optional] 
 **comment** | **str** | Произвольный комментарий к статусу | [optional] 
 **state** | **int** | Состояние передачи Возможные значения поля:   * 0 - Ошибка приема СМЭВ   * 1 - В очереди РСМЭМ   * 2 - В очереди СМЭВ   * 3 - Доставлено СМЭВ   * 4 - Ошибка передачи в СМЭВ  | [optional] 
 **state_name** | **str** | Текстовое наименование состояния | [optional] 

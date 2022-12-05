@@ -30,6 +30,7 @@ class InfoHistoryStatus(object):
     swagger_types = {
         'id': 'str',
         'message': 'InfoHistoryStatusMessage',
+        'message_type': 'str',
         'comment': 'str',
         'state': 'int',
         'state_name': 'str',
@@ -40,6 +41,7 @@ class InfoHistoryStatus(object):
     attribute_map = {
         'id': 'id',
         'message': 'message',
+        'message_type': 'message_type',
         'comment': 'comment',
         'state': 'state',
         'state_name': 'state_name',
@@ -47,10 +49,11 @@ class InfoHistoryStatus(object):
         'date_occured': 'date_occured'
     }
 
-    def __init__(self, id=None, message=None, comment=None, state=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
+    def __init__(self, id=None, message=None, message_type=None, comment=None, state=None, state_name=None, state_message=None, date_occured=None):  # noqa: E501
         """InfoHistoryStatus - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._message = None
+        self._message_type = None
         self._comment = None
         self._state = None
         self._state_name = None
@@ -61,6 +64,8 @@ class InfoHistoryStatus(object):
             self.id = id
         if message is not None:
             self.message = message
+        if message_type is not None:
+            self.message_type = message_type
         if comment is not None:
             self.comment = comment
         if state is not None:
@@ -115,6 +120,29 @@ class InfoHistoryStatus(object):
         """
 
         self._message = message
+
+    @property
+    def message_type(self):
+        """Gets the message_type of this InfoHistoryStatus.  # noqa: E501
+
+        Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием   # noqa: E501
+
+        :return: The message_type of this InfoHistoryStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._message_type
+
+    @message_type.setter
+    def message_type(self, message_type):
+        """Sets the message_type of this InfoHistoryStatus.
+
+        Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием   # noqa: E501
+
+        :param message_type: The message_type of this InfoHistoryStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._message_type = message_type
 
     @property
     def comment(self):
