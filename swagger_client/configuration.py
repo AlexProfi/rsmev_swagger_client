@@ -46,7 +46,7 @@ class Configuration(six.with_metaclass(TypeWithDefault, object)):
     def __init__(self):
         """Constructor"""
         # Default Base url
-        self.host = "http://rsmev.yarcloud.ru:8000/api"
+        self.host = "http://rsmev.yarcloud.ru/api"
         # Temp file folder for downloading files
         self.temp_folder_path = None
 

@@ -185,7 +185,7 @@ except ApiException as e:
 
 ## Documentation for API Endpoints
 
-All URIs are relative to *http://rsmev.yarcloud.ru:8000/api*
+All URIs are relative to *http://rsmev.yarcloud.ru/api*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
