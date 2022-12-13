@@ -13,6 +13,7 @@ Name | Type | Description | Notes
 **ou** | [**ModelInt**](ModelInt.md) | Код ОУ | [optional] 
 **status** | [**ModelInt**](ModelInt.md) | Статус | [optional] 
 **send_type** | **str** | Тип отправки | [optional] 
+**epgu_number** | **str** | Номер ЕПГУ (для отправки ответов по фед формам) | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

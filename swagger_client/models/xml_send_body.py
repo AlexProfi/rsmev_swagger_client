@@ -37,7 +37,8 @@ class XmlSendBody(object):
         'ver': 'ModelInt',
         'ou': 'ModelInt',
         'status': 'ModelInt',
-        'send_type': 'str'
+        'send_type': 'str',
+        'epgu_number': 'str'
     }
 
     attribute_map = {
@@ -50,10 +51,11 @@ class XmlSendBody(object):
         'ver': 'ver',
         'ou': 'ou',
         'status': 'status',
-        'send_type': 'send_type'
+        'send_type': 'send_type',
+        'epgu_number': 'epgu_number'
     }
 
-    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, status=None, send_type=None):  # noqa: E501
+    def __init__(self, xml=None, message_id=None, reply_to=None, zip=None, test=None, by_ftp=None, ver=None, ou=None, status=None, send_type=None, epgu_number=None):  # noqa: E501
         """XmlSendBody - a model defined in Swagger"""  # noqa: E501
         self._xml = None
         self._message_id = None
@@ -65,6 +67,7 @@ class XmlSendBody(object):
         self._ou = None
         self._status = None
         self._send_type = None
+        self._epgu_number = None
         self.discriminator = None
         self.xml = xml
         if message_id is not None:
@@ -85,6 +88,8 @@ class XmlSendBody(object):
             self.status = status
         if send_type is not None:
             self.send_type = send_type
+        if epgu_number is not None:
+            self.epgu_number = epgu_number
 
     @property
     def xml(self):
@@ -317,6 +322,29 @@ class XmlSendBody(object):
         """
 
         self._send_type = send_type
+
+    @property
+    def epgu_number(self):
+        """Gets the epgu_number of this XmlSendBody.  # noqa: E501
+
+        Номер ЕПГУ (для отправки ответов по фед формам)  # noqa: E501
+
+        :return: The epgu_number of this XmlSendBody.  # noqa: E501
+        :rtype: str
+        """
+        return self._epgu_number
+
+    @epgu_number.setter
+    def epgu_number(self, epgu_number):
+        """Sets the epgu_number of this XmlSendBody.
+
+        Номер ЕПГУ (для отправки ответов по фед формам)  # noqa: E501
+
+        :param epgu_number: The epgu_number of this XmlSendBody.  # noqa: E501
+        :type: str
+        """
+
+        self._epgu_number = epgu_number
 
     def to_dict(self):
         """Returns the model properties as a dict"""
