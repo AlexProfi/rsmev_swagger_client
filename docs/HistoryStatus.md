@@ -11,6 +11,7 @@ Name | Type | Description | Notes
 **state_name** | **str** | Текстовое наименование состояния | [optional] 
 **state_message** | **str** | Ответ сервера ЕПГУ на получение статуса | [optional] 
 **date_occured** | **str** | Дата и время сохранения статуса (UTC) | [optional] 
+**message_type** | **str** | Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием  | [optional] 
 **reply_to** | **str** | ReplyTo | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
