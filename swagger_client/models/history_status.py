@@ -38,7 +38,8 @@ class HistoryStatus(object):
         'date_occured': 'str',
         'message_type': 'str',
         'message_type_name': 'str',
-        'reply_to': 'str'
+        'reply_to': 'str',
+        'document': 'str'
     }
 
     attribute_map = {
@@ -52,10 +53,11 @@ class HistoryStatus(object):
         'date_occured': 'date_occured',
         'message_type': 'message_type',
         'message_type_name': 'message_type_name',
-        'reply_to': 'reply_to'
+        'reply_to': 'reply_to',
+        'document': 'document'
     }
 
-    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None, message_type=None, message_type_name=None, reply_to=None):  # noqa: E501
+    def __init__(self, id=None, status=None, comment=None, state=None, epgu_number=None, state_name=None, state_message=None, date_occured=None, message_type=None, message_type_name=None, reply_to=None, document=None):  # noqa: E501
         """HistoryStatus - a model defined in Swagger"""  # noqa: E501
         self._id = None
         self._status = None
@@ -68,6 +70,7 @@ class HistoryStatus(object):
         self._message_type = None
         self._message_type_name = None
         self._reply_to = None
+        self._document = None
         self.discriminator = None
         if id is not None:
             self.id = id
@@ -91,6 +94,8 @@ class HistoryStatus(object):
             self.message_type_name = message_type_name
         if reply_to is not None:
             self.reply_to = reply_to
+        if document is not None:
+            self.document = document
 
     @property
     def id(self):
@@ -344,6 +349,29 @@ class HistoryStatus(object):
         """
 
         self._reply_to = reply_to
+
+    @property
+    def document(self):
+        """Gets the document of this HistoryStatus.  # noqa: E501
+
+        json данные из статуса  # noqa: E501
+
+        :return: The document of this HistoryStatus.  # noqa: E501
+        :rtype: str
+        """
+        return self._document
+
+    @document.setter
+    def document(self, document):
+        """Sets the document of this HistoryStatus.
+
+        json данные из статуса  # noqa: E501
+
+        :param document: The document of this HistoryStatus.  # noqa: E501
+        :type: str
+        """
+
+        self._document = document
 
     def to_dict(self):
         """Returns the model properties as a dict"""

@@ -14,6 +14,7 @@ Name | Type | Description | Notes
 **message_type** | **str** | Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием  | [optional] 
 **message_type_name** | **str** | Тип сообщения Возможные значения поля:   * create - создание   * update - изменение   * cancel - отмена   * send - отправка   * receive - прием  | [optional] 
 **reply_to** | **str** | ReplyTo | [optional] 
+**document** | **str** | json данные из статуса | [optional] 
 
 [[Back to Model list]](../README.md#documentation-for-models) [[Back to API list]](../README.md#documentation-for-api-endpoints) [[Back to README]](../README.md)
 

@@ -202,6 +202,7 @@ Class | Method | HTTP request | Description
 *DictApi* | [**dict_post**](docs/DictApi.md#dict_post) | **POST** /dict/{slug}/ | Обновляет данные справочника
 *DictApi* | [**dict_put**](docs/DictApi.md#dict_put) | **PUT** /dict/{slug}/{code} | Обновляет данные справочника
 *InfoApi* | [**info_history_status**](docs/InfoApi.md#info_history_status) | **GET** /info/Middleman/{id}/history/ | Возвращает историю статусов заявления
+*InfoApi* | [**info_history_status_0**](docs/InfoApi.md#info_history_status_0) | **GET** /info/Middleman/{id}/response_file_xml/ | Возвращает ответ с файлового хранилища для ВС ГИС РУО.
 *TypeinfoApi* | [**ti_search_form**](docs/TypeinfoApi.md#ti_search_form) | **GET** /typeinfo/{slug}/searchform/ | Получает список параметров для поиска по элементам ВС указанного типа
 *TypeinfoApi* | [**typeinfo_list**](docs/TypeinfoApi.md#typeinfo_list) | **POST** /typeinfo/{slug}/ | Получает список данных по ВС, указанному в slug
 *TypeinfoApi* | [**typeinfo_retrieve**](docs/TypeinfoApi.md#typeinfo_retrieve) | **GET** /typeinfo/{slug}/{id}/ | Возвращает элемент по id
@@ -227,6 +228,7 @@ Class | Method | HTTP request | Description
  - [OneOfDocumentFieldValue](docs/OneOfDocumentFieldValue.md)
  - [OperationResult](docs/OperationResult.md)
  - [RColumn](docs/RColumn.md)
+ - [ResponseXML](docs/ResponseXML.md)
  - [Row](docs/Row.md)
  - [Sch](docs/Sch.md)
  - [SearchForm](docs/SearchForm.md)

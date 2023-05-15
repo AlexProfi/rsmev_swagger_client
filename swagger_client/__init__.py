@@ -42,6 +42,7 @@ from swagger_client.models.inline_response404 import InlineResponse404
 from swagger_client.models.one_of_document_field_value import OneOfDocumentFieldValue
 from swagger_client.models.operation_result import OperationResult
 from swagger_client.models.r_column import RColumn
+from swagger_client.models.response_xml import ResponseXML
 from swagger_client.models.row import Row
 from swagger_client.models.sch import Sch
 from swagger_client.models.search_form import SearchForm
